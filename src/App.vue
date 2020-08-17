@@ -4,7 +4,7 @@
     </div>
     <!-- <el-component/> -->
     <!-- <el-button @click='open' type='primary'>notice</el-button> -->
-    <!-- <m-tree  v-for='(item,index) in sourceData' :treeData='item' :key='index'></m-tree> -->
+    <m-tree  v-for='(item,index) in sourceData' :treeData='item' :key='index'></m-tree>
   </div>
 </template>
 
