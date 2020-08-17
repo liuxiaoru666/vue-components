@@ -8,6 +8,8 @@ Vue.prototype.$notify = Notify;
 //通过标签引用的组件
 import  mTree from './components/tree/index';
 Vue.use(mTree);
+import  uploadFile from './components/uploadFile/index';
+Vue.use(uploadFile);
 
 
 Vue.config.productionTip = false

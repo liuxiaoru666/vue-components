@@ -5,6 +5,7 @@
     <!-- <el-component/> -->
     <!-- <el-button @click='open' type='primary'>notice</el-button> -->
     <m-tree  v-for='(item,index) in sourceData' :treeData='item' :key='index'></m-tree>
+    <!-- <upload-file></upload-file> -->
   </div>
 </template>
 

@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "element-ui": "^2.4.5",
+    "js-md5": "^0.7.3",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -36,8 +37,9 @@
       "parser": "babel-eslint"
     },
     "rules": {
-      "no-unused-vars":0,
-      "vue/no-unused-components": "off"
+      "no-unused-vars": 0,
+      "vue/no-unused-components": "off",
+      "no-constant-condition": false
     }
   },
   "browserslist": [
