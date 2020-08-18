@@ -10,7 +10,8 @@
       accept=""
       style="visibility:hidden;"
     />
-    <div class="wrapper" @drop.prevent="handlerDrop($event)" @dragover.prevent>
+    <div class="wrapper" @drop.prevent="handlerDrop($event)" @dragover.prevent  @click="handleClick">
+      <p v-if=' !imgURL&&!fileName'>{{ imgURL || fileName ? "重新选择" : "点击或者拖拽文件到此处" }}</p>
       <p v-if="fileName">{{ fileName }}</p>
       <img
         v-if="imgURL"
@@ -19,8 +20,7 @@
         alt="点击选择文件或者拖拽文件到此处"
       />
     </div>
-    <button @click="handleClick">{{ imgURL ? "重新选择" : "选择文件" }}</button>
-    <button v-if="imgURL || fileName" @click="uploadFile">上传文件</button>
+    <el-button v-if="imgURL || fileName" @click="uploadFile" type='primary' style='margin-top:20px'>上传文件</el-button>
   </div>
 </template>
 <script>

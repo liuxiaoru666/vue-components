@@ -39,7 +39,7 @@
     "rules": {
       "no-unused-vars": 0,
       "vue/no-unused-components": "off",
-      "no-constant-condition": false
+      "no-constant-condition": "off"
     }
   },
   "browserslist": [

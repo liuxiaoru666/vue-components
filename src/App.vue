@@ -3,9 +3,15 @@
     <div>
     </div>
     <!-- <el-component/> -->
-    <!-- <el-button @click='open' type='primary'>notice</el-button> -->
-    <m-tree  v-for='(item,index) in sourceData' :treeData='item' :key='index'></m-tree>
-    <!-- <upload-file></upload-file> -->
+    <div class="item">
+      <el-button @click='open' type='primary'>notice</el-button>
+    </div>
+    <div class="item">
+        <m-tree  v-for='(item,index) in sourceData' :treeData='item' :key='index'></m-tree>
+    </div>
+    <div class="item">
+      <upload-file></upload-file>
+    </div>
   </div>
 </template>
 
@@ -34,7 +40,11 @@ export default {
           isOpen:false,
           children:[{
             label:'二级B',
-            isOpen:false
+            isOpen:false,
+            children:[{
+              label:'三级B',
+              isOpen:false
+          }]
           }]
         }
       ]
@@ -47,14 +57,15 @@ export default {
   methods:{
     open(){
       this.$notify({
-        title:'自定义标题',
-        message:'自定义内容'
+        message:'通知：鬼画符鬼画符看到过和梵蒂'
       })
     }
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+.item{
+  margin-top:20px;
+}
 </style>

@@ -1,15 +1,14 @@
 <template>
-    <div class='notice' v-if='isShow'>
-        标题：{{title}}
-        内容：{{message}}
-        
+    <transition name='fade'>
+        <div class='notice' v-if='isShow'>
+        {{message}}
     </div>
+    </transition>
 </template>
 <script>
 export default {
     data(){
         return{
-            title:'默认标题',
             message:'默认内容',
             isShow:false,
             duration:2000
@@ -24,6 +23,24 @@ export default {
     
 }
 </script>
-<style lang="">
-    
+<style scoped>
+    .notice{
+        display:inline-block;
+        padding:20px;
+        width:500px;
+        text-align:center;
+        border:1px solid #409EFF;
+        color:#409EFF;
+        border-radius:15px;
+        position:fixed;
+        right:0; 
+        top:10px;
+    }
+
+    .fade-enter,.fade-leave-to{
+        right:-500px;
+    }
+    .fade-enter-active,.fade-leave-active{
+        transition: all 0.5s linear;
+    }
 </style>
