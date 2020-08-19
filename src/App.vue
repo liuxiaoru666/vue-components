@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import elComponent from "./components/elComponent.vue";
+// import component from "./components/compoment.vue";
 
 export default {
   name: "app",
@@ -82,7 +82,7 @@ export default {
     };
   },
   components: {
-    elComponent,
+    // component,
   },
   methods: {
     open() {
