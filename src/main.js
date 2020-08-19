@@ -10,6 +10,10 @@ import  mTree from './components/tree/index';
 Vue.use(mTree);
 import  uploadFile from './components/uploadFile/index';
 Vue.use(uploadFile);
+import  collapse from './components/collapse/index';
+Vue.use(collapse);
+import  collapseItem from './components/collapseItem/index';
+Vue.use(collapseItem);
 
 
 Vue.config.productionTip = false
